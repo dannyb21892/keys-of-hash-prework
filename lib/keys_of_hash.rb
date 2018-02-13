@@ -1,5 +1,13 @@
 class Hash
   def keys_of(*args)
-    # code goes here
+    out = []
+    args.each do |value|
+      self.each do |key, word|
+        if word == value
+          out << key
+        end
+      end
+    end
+    out
   end
 end
